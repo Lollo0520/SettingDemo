@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context="com.example.jetwang.settingdemo.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbarBgGrey" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="设置"
+            android:textSize="21sp"
+            android:textColor="@android:color/white"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/wifi_indicator"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="WLAN"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            android:paddingTop="38dp"
+            android:drawablePadding="33dp"
+            android:drawableTop="@drawable/ic_wifi_on"/>
+
+        <TextView
+            android:id="@+id/mini_u_indicator"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="关于小U"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            android:paddingTop="38dp"
+            android:drawablePadding="33dp"
+            android:drawableTop="@drawable/ic_u_symbol"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="38dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/ic_volume_symbol"/>
+
+            <SeekBar
+                android:id="@+id/volume_sb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="2dp"
+                android:thumb="@drawable/seekbar_thumb"
+                android:progressDrawable="@drawable/seekbar_progress"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/ic_brightness_adjustment"/>
+
+            <SeekBar
+                android:id="@+id/brightness_sb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="2dp"
+                android:thumb="@drawable/seekbar_thumb"
+                android:progressDrawable="@drawable/seekbar_progress"/>
+
+            <CheckBox
+                android:id="@+id/brightness_auto_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自动"
+                android:layoutDirection="rtl"
+                android:textColor="@color/grey_999"
+                android:theme="@style/MyCheckBox"
+                android:checked="true"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
