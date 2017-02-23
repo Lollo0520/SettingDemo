@@ -43,13 +43,33 @@
             android:theme="@style/MySwitch"
             android:checked="false" />
 
+        <Button
+            android:id="@+id/update_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/wifi_switch"
+            android:text="UPDATE"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
     </RelativeLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <ProgressBar
+        android:id="@+id/update_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:indeterminate="true" />
+
+    <!--<android.support.v7.widget.RecyclerView
         android:id="@+id/wifi_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_wifi_list"/>
+        tools:listitem="@layout/item_wifi_list"/>-->
+
+    <ListView
+        android:id="@+id/wifi_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 
